@@ -1,0 +1,4 @@
+AETHER iRL project/.venv/
+AETHER iRL project/.env
+AETHER iRL project/__pycache__/
+AETHER iRL project/*.pyc
