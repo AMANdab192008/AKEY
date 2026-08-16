@@ -21,3 +21,4 @@ def get_time_information() -> str:
         f"Year: {now.strftime('%Y')}\n"       # e.g. 2026
         f"Time: {now.strftime('%H')} hours, {now.strftime('%M')} minutes, {now.strftime('%S')} seconds\n"
     )
+    
