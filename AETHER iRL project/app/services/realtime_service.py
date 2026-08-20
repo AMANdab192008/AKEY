@@ -128,7 +128,7 @@ class RealtimeGroqService(GroqService):
             # If retrieval fails, use empty context so the LLM still answers (e.g. with Tavily results).
             context = ""
             try:
-                retriever = self.vector_store_service.get_retrieve(k=10)
+                retriever = self.vector_store_service.get_retriever(k=10)
                 context_docs = retriever.invoke(question)
                 context = "\n".join([doc.page_content for doc in context_docs]) if context_docs else ""
             except Exception as retrieval_err:
