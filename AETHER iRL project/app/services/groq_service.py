@@ -114,7 +114,7 @@ class GroqService:
                 "No Groq API keys configured. Set GROQ_API_KEY (and optionally GROQ_API_KEY_2, GROQ_API_KEY_3, ...) in .env"
             )
         # One ChatGroq instance per key; each request will use one of these in rotation.
-        self.llm = [
+        self.llms = [
             ChatGroq(
                 groq_api_key=key,
                 model_name=GROQ_MODEL,
