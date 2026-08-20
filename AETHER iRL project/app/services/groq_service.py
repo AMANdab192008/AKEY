@@ -226,5 +226,3 @@ class GroqService:
             return self._invoke_llm(prompt, messages, question)
         except Exception as e:
             raise Exception(f"Error getting response from Groq: {str(e)}") from e
-                    
-
