@@ -27,12 +27,12 @@ from typing import List, Optional, Dict
 import uuid
 
 from config import CHATS_DATA_DIR, MAX_CHAT_HISTORY_TURNS
-from app.model import ChatMessage, ChatHistory
+from app.models import ChatMessage, ChatHistory
 from app.services.groq_service import GroqService
 from app.services.realtime_service import RealtimeGroqService
 
 
-logger = logging.getLogger("A key")
+logger = logging.getLogger("A.K.E.Y")
 
 
 # ===============================================================================
