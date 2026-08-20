@@ -59,7 +59,7 @@ class VectorStoreService:
         )
         self.text_splitter = RecursiveCharacterTextSplitter(
             chunk_size = CHUNK_SIZE,
-            CHUNK_OVERLAP = CHUNK_OVERLAP,
+            chunk_overlap = CHUNK_OVERLAP,
         )
         self.vectore_store: Optional[FAISS] = None
 
