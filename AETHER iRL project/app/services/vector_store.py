@@ -76,9 +76,9 @@ class VectorStoreService:
                     content = f.read().strip()
                     if content:
                         documents.append(Document(page_content=content, metadata={"source": str(file_path.name)}))
-            except Exception as e:
+        except Exception as e:
                 logger.warning("Could not load learning data file %s: %s", file_path, e)
-            return documents
+          return documents
 
     def load_chat_history(self) -> List[Document]:
         """Load all .json files in database/chats_data/; turn each into one Document (User:/Assistant: lines). """
