@@ -30,6 +30,7 @@ STARTUP:
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from contextlib import asynccontextmanager
+import sys
 import uvicorn
 import logging
 
@@ -97,6 +98,8 @@ def print_title():
     |___________________________________________________________________|
     
     """
+    
+    sys.stdout.reconfigure(encoding="utf-8")
     print(title)
 
 
