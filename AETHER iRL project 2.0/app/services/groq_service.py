@@ -284,8 +284,10 @@ class GroqService:
         try:
             retriever = self.vector_store_service.get_retriever(k=10)
             context_docs = retriever.invoke(question)
+
             if context_docs:
                 context = "\n".join([doc.page_content for doc in context_docs])
+                context = context[:8000]
                 context_sources = [doc.metadata.get("source", "unknown") for doc in context_docs]
                 logger.info("[CONTEXT] Retrieved %d chunks from sources: %s", len(context_docs), context_sources)
             else:
