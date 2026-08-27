@@ -189,11 +189,23 @@ class RealtimeGroqService(GroqService):
             parts.append("\n=== END SEARCH RESULTS ===")
             formatted = "\n".join(parts)
 
+            MAX_TAVILY_CONTEXT_CHARS = 6000
+
+            formatted = "\n".join(parts)
+
+            if len(formatted) > MAX_TAVILY_CONTEXT_CHARS:
+                formatted = formatted[:MAX_TAVILY_CONTEXT_CHARS]
+                logger.info(
+                    "[TAVILY] Context truncated to %d chars for LLM prompt",
+                    MAX_TAVILY_CONTEXT_CHARS,
+                )
+
             logger.info(
                 "[TAVILY] %d results, AI answer: %s, formatted: %d chars (%.3fs)",
                 len(results), "yes" if ai_answer else "no",
                 len(formatted), time.perf_counter() - t0,
             )
+
             return (formatted, payload)
 
         except Exception as e:
