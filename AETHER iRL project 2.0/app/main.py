@@ -251,7 +251,7 @@ async def chat(request: ChatRequest):
         logger.error("[API /chat] Error: %s", e, exc_info=True)
         raise HTTPException(status_code=500, detail=f"Error processing chat:{str(e)}")
 
-_SPLIT_RE = re.compile(r"(?<=[.!?,;:])\s+")
+_SPLIT_RE = re.compile(r"(?<=[.!?])\s+")
 _MIN_WORDS_FIRST = 2
 _MIN_WORDS = 3
 _MERGE_IF_WORDS = 2
