@@ -1,4 +1,11 @@
+# Original project
 AETHER iRL project/.venv/
 AETHER iRL project/.env
 AETHER iRL project/__pycache__/
 AETHER iRL project/*.pyc
+
+# AETHER iRL project 2.0
+AETHER iRL project 2.0/.venv/
+AETHER iRL project 2.0/.env
+AETHER iRL project 2.0/__pycache__/
+AETHER iRL project 2.0/**/*.pyc

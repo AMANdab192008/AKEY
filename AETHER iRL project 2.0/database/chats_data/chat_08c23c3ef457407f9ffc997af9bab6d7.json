@@ -1,0 +1,21 @@
+{
+  "session_id": "08c23c3e-f457-407f-9ffc-997af9bab6d7",
+  "messages": [
+    {
+      "role": "user",
+      "content": "\"What is the latest news about NVIDIA?\""
+    },
+    {
+      "role": "assistant",
+      "content": ""
+    },
+    {
+      "role": "user",
+      "content": "What is the latest news about NVIDIA?"
+    },
+    {
+      "role": "assistant",
+      "content": ""
+    }
+  ]
+}

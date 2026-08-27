@@ -1,0 +1,13 @@
+{
+  "session_id": "8b58e913-cbc6-47eb-80ac-a2e568b154c1",
+  "messages": [
+    {
+      "role": "user",
+      "content": "What can you do?"
+    },
+    {
+      "role": "assistant",
+      "content": "I can answer your questions, look up info, generate text or images, write essays or code, play music, and open apps or websites for you—all in real time."
+    }
+  ]
+}
